@@ -62,10 +62,12 @@ export class TodosComponent implements OnInit {
         console.log('User ID!!!');
         const userId = paramMap.get('userId');
 
-        // Filter todos by owner (user id)
-        this.filteredData = this.todoData.filter((todo) => {
-          return todo.owner === userId;
-        });
+        if (userId) {
+          // Filter todos by owner (user id)
+          this.filteredData = this.todoData.filter((todo) => {
+            return todo.owner === userId;
+          });
+        }
       }
     );
   }
@@ -92,6 +94,10 @@ export class TodosComponent implements OnInit {
   onDelete(todo) {
     console.log('Delete');
     console.log(todo);
+  }
+
+  newTodo() {
+    this.router.navigate(['todo/new']);
   }
 
 }

@@ -1,21 +1,34 @@
-<div class="container mx-auto box-shadow  mt-7 w-75 bg-white">
-  <div class="flex bg-indigo text-white p-2">
-    <h1>{{ title }}</h1>
+<div class="container">
+
+  <div class="row mb-2">
+    <h2>Todos</h2>
   </div>
-  <input type="text" placeholder="Search..." 
-    [(ngModel)]="searchText" 
-    (change)="onSearch()">
-  <div class="flex">
-    <span *ngIf="filteredData.length === 0">No result</span>
+
+  <div class="row mb-2 d-flex justify-content-between">
+    <div class="col-3 p-0">
+      <input 
+        type="text"
+        class="form-control"
+        placeholder="Search..." 
+        [(ngModel)]="searchText" 
+        (change)="onSearch()"
+      >
+    </div>
+    <button class="btn btn-primary" (click)="newTodo()">
+      New Todo
+    </button>
+  </div>
+  
+  <div class="row">
     <table 
-      class="w-100 p-3 my-table box-shadow" 
-      *ngIf="filteredData.length > 1">
-      <thead class="bg-deep-orange lh-10 text-white">
+      class="table table-hover" 
+      *ngIf="filteredData.length > 1"
+    >
+      <thead>
         <tr>
           <td>Name</td>
           <td>Description</td>
           <td>Status</td>
-          <!-- <td># of Todos</td> -->
           <td>Actions</td>
         </tr>
       </thead>
@@ -24,7 +37,6 @@
           <td>{{ todo.name }}</td>
           <td>{{ todo.description }}</td>
           <td>{{ todo.status }}</td>
-          <!-- <td>5</td> -->
           <td>
             <a (click)="onUpdate(todo)">Update</a>
             <br />
@@ -33,13 +45,6 @@
         </tr>
         
       </tbody>
-      <tfoot>
-        <tr>
-          <td class="p-2" colspan="6">
-            Showing {{ filteredData.length }} results of {{ todoData.length }}.
-          </td>
-        </tr>
-      </tfoot>
     </table>
   </div>
 </div>

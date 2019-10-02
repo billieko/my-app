@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { TodosComponent } from './todos/todos.component';
+import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,14 @@ const routes: Routes = [
   {
     path: 'todos/:userId',
     component: TodosComponent
+  },
+  {
+    path: 'todo/:id',
+    component: TodoComponent
+  },
+  {
+    path: 'todo/new',
+    component: TodoComponent
   },
   {
     path: '',
