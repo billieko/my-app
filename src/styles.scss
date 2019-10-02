@@ -1,0 +1,265 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0px;
+  margin: 0pxl;
+}
+
+ul,
+ol > li {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  min-width: 800px;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto;
+}
+
+.ml-6,
+.mx-6 {
+  margin-left: 2em;
+}
+.ml-2,
+.mx-2 {
+  margin-right: 0.75em;
+}
+.mr-2,
+.mx-2 {
+  margin-right: 0.75em;
+}
+
+.mr-6,
+.mx-6 {
+  margin-right: 2em;
+}
+
+.mt-auto,
+.my-auto {
+  margin-top: auto;
+}
+
+.mb-auto,
+.my-auto {
+  margin-bottom: auto;
+}
+
+.mt-7 {
+  margin-top: 2em;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.p-1 {
+  padding: 0.5em;
+}
+
+.p-2 {
+  padding: 0.75em;
+}
+
+.p-3 {
+  padding: 1em;
+}
+
+.pt-2,
+.py-2 {
+  padding-top: 0.75em;
+}
+
+.pb-2,
+.py-2 {
+  padding-bottom: 0.75em;
+}
+
+.bg-blue-grey {
+  background-color: #607d8b;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-indigo {
+  background-color: #3f51b5;
+}
+
+.bg-deep-purple {
+  background-color: #673ab7;
+}
+
+.bg-deep-orange {
+  background-color: #ff7043;
+}
+
+.bg-alizarin {
+  background-color: #e74c3c;
+}
+
+.bg-pomegranate {
+  background-color: #c0392b;
+}
+
+.text-white {
+  color: white;
+}
+
+.box-shadow {
+  box-shadow: 0px 1px 0.4em #444;
+}
+
+.lh-10 {
+  line-height: 3em;
+}
+
+.lh-8 {
+  line-height: 2.5em;
+}
+
+.font-weight-light {
+  font-weight: 200;
+}
+
+.outline-none {
+  outline: none;
+}
+
+.font-size-2xl {
+  font-size: 2em;
+}
+
+.font-large {
+  font-size: 2em;
+}
+
+/* .link-button {
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: black;
+} */
+
+.link-button:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+.btn {
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: black;
+  font-size: 11px;
+}
+
+.btn.btn-success {
+  background-color: #2ecc71;
+  color: white;
+  border: 1px solid #1abc9c;
+}
+.btn.btn-success:hover {
+  background-color: #1abc9c;
+}
+
+.btn.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+  border: 1px solid #c0392b;
+}
+.btn.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.btn.btn-primary {
+  background-color: #9c27b0;
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.btn.btn-primary:hover {
+  background-color: #7e57c2;
+}
+
+.border-bottom {
+  border-bottom: 1px solid;
+}
+
+.border-top {
+  border-top: 1px solid;
+}
+
+.border-grey {
+  border-color: #dedede;
+}
+
+.text-center {
+  text-align: center;
+}

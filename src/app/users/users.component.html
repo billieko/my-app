@@ -1,0 +1,52 @@
+<div class="container mx-auto box-shadow  mt-7 w-75 bg-white">
+  <div class="flex bg-indigo text-white p-2">
+    <h1>{{ title }}</h1>
+    <a class="btn btn-primary ml-auto my-auto" href="/"
+      >View Todos</a
+    >
+  </div>
+  <input type="text" placeholder="Search..." 
+    [(ngModel)]="searchText" 
+    (change)="onSearch()">
+  <div class="flex">
+    <span *ngIf="filteredData.length === 0">No result</span>
+    <table 
+      class="w-100 p-3 my-table box-shadow" 
+      *ngIf="filteredData.length > 1">
+      <thead class="bg-deep-orange lh-10 text-white">
+        <tr>
+          <td>#</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Occupation</td>
+          <td></td>
+          <td>Actions</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredData">
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.occupation }}</td>
+          <td>
+            <a routerLink="/todos/{{ user.id }}">View Todos</a>
+          </td>
+          <td>
+            <a (click)="onUpdate(user)">Update</a>
+            <br />
+            <a (click)="onDelete(user)">Delete</a>
+          </td>
+        </tr>
+        
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="p-2" colspan="6">
+            Showing {{ filteredData.length }} results of {{ userData.length }}.
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
